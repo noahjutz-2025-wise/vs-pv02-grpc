@@ -1,5 +1,4 @@
-# Aufgabe gRPC: OSM-Protobuf
+# Aufgabe gRPC: LIDAR Scanner
 
-- Download: https://download.geofabrik.de/europe/germany/bayern/oberpfalz.html
-- Documentation: https://wiki.openstreetmap.org/wiki/PBF_Format
-- .proto definitions: https://github.com/openstreetmap/OSM-binary/tree/master/osmpbf
+Erstelle einen Service, der eine Punktwolke (x, y, z) als Stream empfängt, und den Abstand des nähesten Punktes zurück gibt.
+
