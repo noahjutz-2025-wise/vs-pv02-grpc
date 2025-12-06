@@ -17,6 +17,6 @@ message Warning {
   uint32 distance = 1;
 }
 
-service MeasureDistanceService {
+service LidarWarningService {
   rpc measureDistance(stream PointCloud) returns (stream Warning);
 }
