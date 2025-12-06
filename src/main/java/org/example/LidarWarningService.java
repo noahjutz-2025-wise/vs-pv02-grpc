@@ -16,9 +16,10 @@ public class LidarWarningService extends LidarWarningServiceGrpc.LidarWarningSer
             pointCloud.getPointsList().stream()
                 .map(p -> distance(p.getX(), p.getY(), p.getZ()))
                 .min(Comparator.naturalOrder());
-        if (distance.isPresent() && distance.get() <= 1) {
+        if (distance.isPresent() && distance.get() <= 10) {
           responseObserver.onNext(Warning.newBuilder().setDistance(distance.get()).build());
         }
+        IO.println(distance);
       }
 
       @Override
